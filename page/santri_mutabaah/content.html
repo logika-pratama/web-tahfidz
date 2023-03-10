@@ -1,0 +1,51 @@
+<div class="card-body">
+  <div class="card-title mb-2">Mutabaah</div>
+  <form action="javascript:void(0)" class="navbar-left navbar-form nav-search">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <button class="btn btn-search pr-1">
+          <i class="fa fa-search search-icon"></i>
+        </button>
+      </div>
+      <input type="text" onkeyup="search_mutabaah()" name="search_santri_mutabaah" placeholder="Search ..." class="form-control">
+    </div>
+  </form>
+  <form class="searching">
+  <div class="card-list sm-list">
+    
+  </div>
+  </form>
+</div>
+
+
+<div class="modal fade addMutabaah" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Mutabaah <label class="title-mutabaah">Harun Toufik (THFZ0123)</label></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="form-mutabaah">
+          <input name="kode_user" type="hidden">
+            <table class="table table-striped">
+            <thead>
+              <tr style="background-color:#87CEFA;">
+                <th>Mutabaah</th>
+                <th><input type="checkbox" onclick="checkAllMutabaah()" class="form-check-input checkAllMutabaah"/></th>
+              </tr>
+            </thead>
+            <tbody class="list-mutabaah">
+            </tbody>
+            </table>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Tutup</button>
+        <button type="button" class="btn btn-success btn-sm" onclick="saveMutabaah()">Simpan</button>
+      </div>
+    </div>
+  </div>
+</div>
