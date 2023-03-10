@@ -7,7 +7,7 @@ function register_santri(){
             "Authorization": "Bearer " + getCookie('token')
         },
     success: function(data){
-        setCookie('token', data.token, 360);
+        setCookie('token', data.token, 3600);
         setCookie('aktifasi', 1, 360);
         $.notify({
             icon: 'flaticon-success',
@@ -48,7 +48,7 @@ function register_musrif(){
             "Authorization": "Bearer " + getCookie('token')
         },
     success: function(data){
-        setCookie('token', data.token, 360);
+        setCookie('token', data.token, 3600);
         setCookie('aktifasi', 1, 360);
         $.notify({
             icon: 'flaticon-success',
