@@ -84,9 +84,13 @@ function register(){
 function getMenu(){
     var check = getData();
     if(check.status_user == 'aktif'){
+        $('.table-mutabaah').html('');
+        $('.table-tahfidz').html('');
         if(check.hakakses_user == 'musrif'){
             $('.submenu-user').load('sidebar/mutabaah_sidebar.html');
             setTimeout(function(){
+                $('.p_name').text(check.nama_musrif);
+                $('.p_status').text(check.hakakses_user);
                     $.ajax({
                         url : BASEURL+'halaqah_santri/listmusrif',
                         type: "GET",
@@ -95,11 +99,14 @@ function getMenu(){
                             "Authorization": "Bearer " + getCookie('token')
                         },
                     success: function(data){
+
                         halaqah = data.data;
                         var i;
+                        var no = 1;
                         for (i = 0; i < halaqah.length; ++i) {
                             $('.sub-mutabaah').append('<li><a href="javascript:void(0)"  data-id="'+halaqah[i]['id_halaqah_santri']+'" data-name="'+halaqah[i]['halaqah']+'" onclick="changePage('+"'santri_mutabaah'"+')"><span class="sub-item">'+halaqah[i]['halaqah']+'</span></a></li>');
                             $('.sub-tahfidz').append('<li><a href="javascript:void(0)" data-id="'+halaqah[i]['id_halaqah_santri']+'" data-name="'+halaqah[i]['halaqah']+'" onclick="changePage('+"'santri_tahfidz'"+')"><span class="sub-item">'+halaqah[i]['halaqah']+'</span></a></li>');
+                            ++no;
                         }
                     },
                     error: function (xhr, status, error){
