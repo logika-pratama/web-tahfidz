@@ -91,7 +91,7 @@ function getMenu(){
             setTimeout(function(){
                 $('.p_name').text(check.nama_musrif);
                 $('.p_status').text(check.hakakses_user);
-                    $.ajax({
+                $.ajax({
                         url : BASEURL+'halaqah_santri/listmusrif',
                         type: "GET",
                         async: false,  
@@ -116,7 +116,7 @@ function getMenu(){
 
             }, 1000);
         } else if(check.hakakses_user == 'santri'){
-            $('.submenu-user').load('sidebar/santri.html');
+            $('.submenu-user').load('sidebar/santri_sidebar.html');
             setTimeout(function(){
             }, 1000);
         }

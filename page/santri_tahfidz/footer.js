@@ -31,8 +31,44 @@ function addtahfidz(){
 
     $('.t-santri').val(label);
     $('.t-tanggal').val(date);
-
     $('.addtahfidz').modal('show');
+
+    $.ajax({
+        url : BASEURL+'tahfidz/getLast/'+id,
+        type: "GET",
+        headers: {
+            "Authorization": "Bearer " + getCookie('token')
+        },
+    success: function(data){
+        if(data.data[0]['surah_from'] == null){
+            $('.hafalan-terakhir').hide();
+        } else {
+
+            timers = new Date(data.data[0]['tgl_tahfidz']);
+            var jam = timers.getHours();
+            var menit = timers.getMinutes();
+            var timer = jam+':'+menit;
+
+            $('.hafalan-terakhir').show();
+            var title = data.data[0]['tipe_tahfidz']+" "+timer;
+            $('.tahfidz-title').text(title);
+            if(data.data[0]['surah_to'] == null){
+                $('.last-surah').hide();
+                var fsurah = data.data[0]['surah_from']+" ayat "+data.data[0]['ayat_from_first']+" - "+data.data[0]['ayat_from_last'];
+                $('.first-surah').text(fsurah);
+            } else {
+                var fsurah = data.data[0]['surah_from']+" ayat "+data.data[0]['ayat_from_first']+" - "+data.data[0]['ayat_from_last'];
+                $('.first-surah').text(fsurah);
+            
+                var lsurah = data.data[0]['surah_to']+" ayat "+data.data[0]['ayat_to_first']+" - "+data.data[0]['ayat_to_last'];
+                $('.last-surah').text(lsurah);
+                $('.last-surah').show();
+            }
+        }
+    },error: function (xhr, status, error){
+        $('.hafalan-terakhir').hide();
+    }
+    });
 }
 
 function savetahfidz(){

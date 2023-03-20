@@ -1,52 +1,88 @@
-<div class="card-body">
-    <div class="card-title mb-2">Home</div>
-    <div class="card-list">
-        <div class="item-list">
-            <div class="avatar">
-                <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="..." class="avatar-img rounded-circle">
-            </div>
-            <div class="info-user ml-3">
-                <div class="p_name"></div>
-                <div class="p_status"></div>
-            </div>
-            <a href="javascript:void(0)" onclick="changePage('profile_musrif')" class="btn btn-primary btn-round btn-sm">                    
-                <i class="fa fa-cog"> Setting</i>                
-            </a>
-        </div>
-    </div>
-    <div class="card-list sm-list row">
-        <div class="col-12">
-            <ul class="nav nav-pills nav-secondary  nav-pills-no-bd nav-pills-icons justify-content-center" id="pills-tab-with-icon" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link active" id="pills-tahfidz-tab-icon" data-toggle="pill" href="#pills-tahfidz-icon" role="tab" aria-controls="pills-tahfidz-icon" aria-selected="true">
-                        <i class="flaticon-agenda-1"></i>
-                        Tahfid
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="pills-mutabaah-tab-icon" data-toggle="pill" href="#pills-mutabaah-icon" role="tab" aria-controls="pills-mutabaah-icon" aria-selected="false">
-                        <i class="flaticon-list"></i>
-                        Mutabaah
-                    </a>
-                </li>
-            </ul>
-            <div class="tab-content mt-2 mb-3" id="pills-with-icon-tabContent">
-                <div class="tab-pane fade show active" id="pills-tahfidz-icon" role="tabpanel" aria-labelledby="pills-tahfidz-tab-icon">
-                    <div class="table-responsive table-hover table-sales">
-                        <table class="table">
-                            <tbody class="table-tahfidz">
-                                
-                            </tbody>
-                        </table>
+<div class="page-inner mt--5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title mb-2">Home</div>
+                    <div class="card-list row">
+                        <div class="col-sm-6 col-6 col-lg-3">
+							<div class="card p-3">
+								<div class="d-flex align-items-center">
+									<span class="stamp stamp-md bg-warning mr-3">
+										<i class="far fa-object-group"></i>
+									</span>
+									<div>
+										<h5 class="mb-1"><b><a href="#">Halaqah</small></a></b></h5>
+										<small class="text-muted">1</small>
+									</div>
+								</div>
+							</div>
+						</div>
+                        <div class="col-sm-6 col-6 col-lg-3">
+							<div class="card p-3">
+								<div class="d-flex align-items-center">
+									<span class="stamp stamp-md bg-success mr-3">
+										<i class="fa fa-users"></i>
+									</span>
+									<div>
+										<h5 class="mb-1"><b><a href="#">Santri</small></a></b></h5>
+										<small class="text-muted">7</small>
+									</div>
+								</div>
+							</div>
+						</div>
+                        <div class="col-12">
+                            <div class="item-list">
+                                <div class="avatar">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="..." class="avatar-img rounded-circle">
+                                </div>
+                                <div class="info-user ml-3">
+                                    <div class="p_name"></div>
+                                    <div class="p_status"></div>
+                                </div>
+                                <a href="javascript:void(0)" onclick="changePage('profile_musrif')" data-id="0" class="btn btn-primary btn-round btn-sm">                    
+                                    <i class="fa fa-cog"> Setting</i>                
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="tab-pane fade" id="pills-mutabaah-icon" role="tabpanel" aria-labelledby="pills-mutabaah-tab-icon">
-                    <div class="table-responsive table-hover table-sales">
-                        <table class="table">
-                            <tbody class="table-mutabaah">
-                                
-                            </tbody>
-                        </table>
+                    <div class="card-list sm-list row">
+                        <div class="col-12">
+                            <ul class="nav nav-pills nav-secondary  nav-pills-no-bd nav-pills-icons justify-content-center" id="pills-tab-with-icon" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="pills-tahfidz-tab-icon" data-toggle="pill" href="#pills-tahfidz-icon" role="tab" aria-controls="pills-tahfidz-icon" aria-selected="true">
+                                        <i class="flaticon-agenda-1"></i>
+                                        Tahfid
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="pills-mutabaah-tab-icon" data-toggle="pill" href="#pills-mutabaah-icon" role="tab" aria-controls="pills-mutabaah-icon" aria-selected="false">
+                                        <i class="flaticon-list"></i>
+                                        Mutabaah
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="tab-content mt-2 mb-3" id="pills-with-icon-tabContent">
+                                <div class="tab-pane fade show active" id="pills-tahfidz-icon" role="tabpanel" aria-labelledby="pills-tahfidz-tab-icon">
+                                    <div class="table-responsive table-hover table-sales">
+                                        <table class="table">
+                                            <tbody class="table-tahfidz">
+                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="pills-mutabaah-icon" role="tabpanel" aria-labelledby="pills-mutabaah-tab-icon">
+                                    <div class="table-responsive table-hover table-sales">
+                                        <table class="table">
+                                            <tbody class="table-mutabaah">
+                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,20 +1,28 @@
-<div class="card-body">
-    <div class="card-title mb-2">Tahfidz</div>
-    <form action="javascript:void(0)" class="navbar-left navbar-form nav-search">
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <button class="btn btn-search pr-1">
-            <i class="fa fa-search search-icon"></i>
-          </button>
+<div class="page-inner mt--5">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-title mb-2">Tahfidz</div>
+          <form action="javascript:void(0)" class="navbar-left navbar-form nav-search">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <button class="btn btn-search pr-1">
+                  <i class="fa fa-search search-icon"></i>
+                </button>
+              </div>
+              <input type="text" onkeyup="search_tahfidz()" name="search_santri_tahfidz" placeholder="Search ..." class="form-control">
+            </div>
+          </form>
+          <form class="searching">
+            <div class="card-list sm-list">
+            </div>
+          </form>
         </div>
-        <input type="text" onkeyup="search_tahfidz()" name="search_santri_tahfidz" placeholder="Search ..." class="form-control">
       </div>
-    </form>
-    <form class="searching">
-    <div class="card-list sm-list">
     </div>
-    </form>
   </div>
+</div>
   
   
 <div class="modal fade addtahfidz" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -45,6 +53,13 @@
                     <option value="murojaah">Murojaah</option>
                     <option value="tasmi">Tasmi</option>
                   </select>
+              </div>
+            </div>
+            <div class="col-12 hafalan-terakhir">
+              <div class="form-group">
+                  <label class="tahfidz-title"></label><br>
+                  <span class="first-surah"></span><br> 
+                  <span class="last-surah"></span>
               </div>
             </div>
             <div class="col-12">
@@ -136,7 +151,7 @@
             <table class="table table-striped">
               <thead>
                 <tr style="background-color:#87CEFA;">
-                  <th>Tanggal</th>
+                  <th>Waktu</th>
                   <th>Tahfidz</th>
                   <th>Aksi</th>
                 </tr>

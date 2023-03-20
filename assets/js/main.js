@@ -1,5 +1,5 @@
-// var BASEURL = 'http://192.168.100.183:3000/';
-var BASEURL ='http://151.106.112.34:3012/';
+var BASEURL = 'http://192.168.100.183:3000/';
+// var BASEURL ='http://151.106.112.34:3012/';
 var USERNAME ='4b9gbm2py3r3f83';
 var PWD = '9dpfdr3f83'; 
 
@@ -69,7 +69,7 @@ setInterval(function (){
         if(getCookie('aktifasi') == 1){
             page = $('[name="paging"]').val();
             if(page != getUrl()){
-                $('.changepage').load('page/'+getUrl()+'/content.html');
+                $('.content-body').hide().load('page/'+getUrl()+'/content.html').fadeIn('500');;
                 $('[name="paging"]').val(getUrl());
                 loadData(getUrl());
             }
@@ -158,17 +158,19 @@ function changePage(char){
 
 function loadData(char){
     setTimeout(function(){
-    if(char == 'santri_mutabaah'){
-        loadSantri();
-        loadMutabaah();
-    } else if(char == 'santri_tahfidz') {
-        loadtahfidz();
-        loadSantriTahfidz();
-        surah_list();
-    } else if(char == 'home_musrif'){
-        getListHome();
-    } else if(char == 'profile_musrif'){
-        loadProfile();
-    }
+        if(char == 'santri_mutabaah'){
+            loadSantri();
+            loadMutabaah();
+        } else if(char == 'santri_tahfidz') {
+            loadtahfidz();
+            loadSantriTahfidz();
+            surah_list();
+        } else if(char == 'home_musrif'){
+            getListHome();
+        } else if(char == 'profile_musrif'){
+            loadProfile();
+        } else if(char == 'home_santri'){
+            getDashboard();
+        }
     },1000)
 }
