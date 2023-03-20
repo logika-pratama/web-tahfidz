@@ -1,5 +1,5 @@
-var BASEURL = 'http://192.168.100.183:3000/';
-// var BASEURL ='http://151.106.112.34:3012/';
+// var BASEURL = 'http://192.168.100.183:3000/';
+var BASEURL ='http://151.106.112.34:3012/';
 var USERNAME ='4b9gbm2py3r3f83';
 var PWD = '9dpfdr3f83'; 
 
